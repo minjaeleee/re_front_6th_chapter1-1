@@ -19,14 +19,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:report": "npx playwright show-report",
-    "test:generate": "playwright codegen localhost:5173",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+    "test:generate": "playwright codegen localhost:5173"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
