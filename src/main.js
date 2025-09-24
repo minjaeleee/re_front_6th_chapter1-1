@@ -1,5 +1,4 @@
-import Router from "./router/Router.js";
-import List from "./components/List.js";
+import { App } from "./App.js";
 
 const enableMocking = () =>
   import("./mocks/browser.js").then(({ worker }) =>
@@ -9,13 +8,8 @@ const enableMocking = () =>
   );
 
 function main() {
-  const router = new Router();
-  router.addRoute("/", List);
-  router.subscribe((path, routeInfo) => {
-    document.getElementById("root").innerHTML = routeInfo.component();
-  });
-
-  router.start();
+  const app = new App();
+  app.start();
 }
 
 // 애플리케이션 시작
